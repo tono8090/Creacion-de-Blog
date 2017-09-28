@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lechero</title>
+<script language="javascript">
+  function removeA(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+function PesPro(){ 
+ var peso = document.getElementById("peso").value;
+ var camion = document.getElementById("camion").value;
+ var produccion = document.getElementById("produccion").value;
+ var peso1 = peso.split(" ");
+ var produccion1 = produccion.split(" ");
+ 
+ var sum = 0; 
+ 
+for(var i = 0; i < peso1.length; i++) {
+    sum += peso1[i]*1; 
+}
+
+var sum3 = sum;
+
+while (sum3 > camion ){
+
+var max=Math.max.apply(null, peso1);
+var max2=Math.max.apply(null, produccion1);
+ var b = String(max);
+ var a = String(max2);
+// var a = peso1.indexOf(b);
+removeA(peso1, b);
+removeA(produccion1, a);
+sum3=0;
+for(var i = 0; i < peso1.length; i++) {
+    sum3 += peso1[i]*1; 
+}
+}
+var sum2 = 0;
+for(var i = 0; i < peso1.length; i++) {
+    sum2 += produccion1[i]*1; 
+}
+document.write('la produccion seria de: ',sum2);
+}
+
+
+</script>
+</head>
+<body>
+        <p>camtidad de vacas<input type="text" id="cantidad" value=" "><br>
+        <p>peso de las vacas<input type="text" id="peso" value=" "><br>
+         <p>produccion de las vacas <input type="text" id="produccion" value=" "><br>
+          <p>Peso limite del camion <input type="text" id=camion value=" "><br>
+      <input type="button" value="calcular" onclick="PesPro()"></p>
+	
+	</form>
+</body>
+</html> 
