@@ -1,7 +1,4 @@
 <?php 
-include("urlToForm.php"); 
-?>
-<?php 
 /* Main page with two forms: sign up and log in */
 require 'db.php';
 session_start();
