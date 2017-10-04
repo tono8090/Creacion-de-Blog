@@ -31,17 +31,13 @@ else {
            <p>
 
           </p>
-          
-          <?php
-          
 
-          
-          ?>
           
           <h2><?php echo $first_name.' '.$last_name; ?></h2>
           <p><?= $email ?></p>
           
           <a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a>
+          <a href="foroadd.php"><button class="button button-block" name="logout"/>Crear un Post</button></a>
 
     </div>
 
