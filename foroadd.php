@@ -4,28 +4,23 @@ session_start();
 
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
-  $_SESSION['message'] = "You must log in before viewing your profile page!";
+  $_SESSION['message'] = "Debes Iniciar Sesion antes de acceder!";
   header("location: error.php");    
-}
-else{
-    
-}
- 
+}    
+
 ?>
 <!DOCTYPE html>
 <html>
-    <body>
-            <a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a>
+                <a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a>
         <a href="profile.php"><button class="button button-block" name="profile"/>Perfil</button></a>
-<form method="post" action="">
-    <p>Titulo: <input type="text" name="cat_name" /></p>
-    <p>description: <input type="text" name="cat_description" style="WIDTH: 400px; HEIGHT: 200px" size=32/></p>
-    <input type="submit" value="Add category" />
-
-
-        
-    </body>
+    <body>
+<form method="post" action="mis.php">
+    <p>Titulo: <input type="text" name="titulo" /></p>
+    <p>description: <input type="text" name="descripcion" style="WIDTH: 400px; HEIGHT: 200px" size=32/></p>
+    <input type="submit" value="Crear Post" name="crear" />
+   
         </form>
+ </body>
 
 </html>
 
