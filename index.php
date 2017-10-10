@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           
           <div class="field-wrap">
             <label>
-              ContraseÃ±a<span class="req">*</span>
+              Contraseña<span class="req">*</span>
             </label>
             <input type="password" required autocomplete="off" name="password"/>
           </div>
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           
           <div class="field-wrap">
             <label>
-              ContraseÃ±a<span class="req">*</span>
+              Contraseña<span class="req">*</span>
             </label>
             <input type="password"required autocomplete="off" name='password'/>
           </div>
@@ -123,3 +123,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 </body>
 </html>
+<?php 
+require 'db2.php';
+ 
+  
+ $contenido = $mysqli1->query("SELECT titulo FROM comentarios");
+ $contenido1 = $mysqli1->query("SELECT account FROM comentarios");
+$row = array();
+$row2 = array();
+$row3 = array();
+$rows1=$contenido-> num_rows;
+$strings = array();
+$account=array();
+$comprar='';
+while( $row[] = mysqli_fetch_assoc( $contenido ) );
+while( $row1[] = mysqli_fetch_assoc( $contenido1 ) );
+
+ 
+for ($i = 0; $i < $rows1; $i++) {
+  
+echo "<p><a href='post.php'>".$row[$i]['titulo']."</a></p>".'by: '.$row1[$i]['account'] ;}
+?>
+ 

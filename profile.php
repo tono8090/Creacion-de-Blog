@@ -37,7 +37,8 @@ else {
           <p><?= $email ?></p>
           
           <a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a>
-          <a href="foroadd.php"><button class="button button-block" name="logout"/>Crear un Post</button></a>
+          <a href="foroadd.php"><button class="button button-block" name="añadir"/>Crear un Post</button></a>
+          <a href="posts.php"><button class="button button-block" name="Inicio"/>Inicio</button></a>
 
     </div>
 
