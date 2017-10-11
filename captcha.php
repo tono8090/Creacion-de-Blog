@@ -1,5 +1,5 @@
 <?php
-echo 'estas entrando al post pon tu codigo aqui';
+echo 'estas entrando al post pon tu codigo aqui para demostrar que no eres robot';
 ?>
 <!DOCTYPE html>
 <html>
