@@ -6,7 +6,8 @@ session_start();
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 
 <?php 
@@ -29,13 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
-  <?php include 'css/css.html'; ?>
 </head>
-
-<?php 
-
-?>
-<body background="fondo.png">
+<body >
         
           <h1>Bienvenido de vuelta!</h1>
           
@@ -45,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </label>
             <input type="email" required autocomplete="off" name="email"/>
             <label>
-                <p>Contraseña</p>
+                <p>ContraseÃ±a</p>
             </label>
             <input type="password" required autocomplete="off" name="password"/>
-          <button class="button button-block" name="login" />Iniciar Sesion</button>
+          <button class="btn btn-primary" name="login" />Iniciar Sesion</button>
           </form>
           <h1>Registrate Gratis</h1>
           
@@ -69,17 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </label>
             <input type="email"required autocomplete="off" name='email' />
             <label>
-                <p>Contraseña</p> 
+                <p>ContraseÃ±a</p> 
             </label>
             <input type="password"required autocomplete="off" name='password'/>
-          <button type="submit" class="button button-block" name="register" />Registrarse</button>
+          <button type="submit" class="btn btn-primary" name="register" />Registrarse</button>
           </form>
 
- 
-   
-      
- 
     <h1>Blogs Disponibles!</h1>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 <?php 
