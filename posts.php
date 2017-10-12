@@ -28,6 +28,5 @@ $enviar="<p><a  href='captcha.php'> ".$row[$i]['titulo']."</a></p>".'by: '.$row1
               <p><a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a></p>
               <p><a href="profile.php"><button class="button button-block" name="logout"/>Perfil</button></a></p>
    
-?>
 </html>
  

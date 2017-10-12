@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
-  <?php include 'css/css.html'; ?>
+
 </head>
 
 <?php 
@@ -35,17 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <?php 
 
 ?>
-<body>
-  <div class="form">
-      
-      <ul class="tab-group">
-        <li class="tab"><a href="#signup">Registrate</a></li>
-        <li class="tab active"><a href="#login">Inicia Sesion</a></li>
-      </ul>
-      
-    
-
-          
+<body background="fondo.png">
+        
           <h1>Bienvenido de vuelta!</h1>
           
           <form action="index.php" method="post" autocomplete="off"> 
@@ -53,9 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 <p>Email</p>
             </label>
             <input type="email" required autocomplete="off" name="email"/>
-      
-          
-     
             <label>
                 <p>Contraseña</p>
             </label>
@@ -91,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
    
       
  
-
+    <h1>Blogs Disponibles!</h1>
 </body>
 </html>
 <?php 

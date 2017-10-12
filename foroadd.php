@@ -16,7 +16,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
     <body>
 <form method="post" action="mis.php">
     <p>Titulo: <input type="text" name="titulo" /></p>
-    <p>description: <input type="text" name="descripcion" style="WIDTH: 400px; HEIGHT: 200px" size=32/></p>
+    <p>description: <input type="textarea" name="descripcion" cols="1000" rows="1000" style="WIDTH: 400px; HEIGHT: 200px" size=32/></p>
     <input type="submit" value="Crear Post" name="crear" />
    
         </form>
