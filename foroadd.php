@@ -26,7 +26,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 
    <nav  class="z-depth-0" style="background-color: black" ><div  class="container-wide"><div class="row"><div class="col s12 m3" >
  <img src="logo1.png" class="col s12 m3"  width="auto" height="auto">
-
+<center> <div class="row"><h4 >Nuevo post</h4></div></center>
   </nav>
 
 
@@ -73,6 +73,14 @@ if ( $_SESSION['logged_in'] != 1 ) {
   #titulo { 
     width: auto;
 }
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  color: white;
+}
 </style>
 
 
@@ -89,6 +97,17 @@ if ( $_SESSION['logged_in'] != 1 ) {
       <script src="js/materialize.min.js"></script>    
       <script type="text/javascript"></script>
  </body>
+
+
+
+<footer style="background-color: black" class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017-2017 Emilio, All rights reserved.
+        <a class="grey-text text-lighten-4 right" href="https://github.com/tono8090/Creacion-de-Blog/blob/gh-pages/README.md">Repositorio Github</a>
+        </div>
+      </div>
+    </footer
 
 </html>
 

@@ -15,7 +15,7 @@
 
    <nav  class="z-depth-0" style="background-color: black" ><div  class="container-wide"><div class="row"><div class="col s12 m3" >
  <img src="logo1.png" class="col s12 m3"  width="auto" height="auto">
-
+<center> <div class="row"><h4 class="col m6" >Perfil</h4></div></center>
   </nav>
         <meta name="viewport" content="width=device-width, initial-scale=1">      
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

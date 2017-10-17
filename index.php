@@ -156,7 +156,7 @@ background-attachment : fixed;
 
     <center >
       <div class="container" >
-        <div id="cosa" class="z-depth-1 grey lighten-4 row"  style="display: inline-block; padding: 32px 48px 0px 48px; border: 20px solid #EEE;  ">
+        <div id="cosa" class="z-depth-1 grey lighten-4 row"  style="display: inline-block; padding: 32px 48px 0px 48px; border: 40px solid #EEE;  ">
 
           <h1 style="color: black">Registrate</h1>
           

@@ -14,6 +14,8 @@
 
    <nav  class="z-depth-0" style="background-color: black" ><div  class="container-wide"><div class="row"><div class="col s12 m3" >
  <img src="logo1.png" class="col s12 m3"  width="auto" height="auto">
+<center> <div class="row"><h4 class="col m6" >Inicio</h4></div></center>
+ 
 
   </nav>
 
@@ -66,6 +68,25 @@ for ($i = 0; $i < $rows1; $i++) {
         </div>
       </div> ";  
     }
+
 ?>
+<style type="text/css">
+	footer {
+  background-color: black;
+  position: absolute;
+  bottom: 1;
+  width: 100%;
+  height: 70px;
+  color: white;
+}
+</style>
+<footer style="background-color: black" class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017-2017 Emilio, All rights reserved.
+        <a class="grey-text text-lighten-4 right" href="https://github.com/tono8090/Creacion-de-Blog/blob/gh-pages/README.md">Repositorio Github</a>
+        </div>
+      </div>
+    </footer>
 
 </html>
