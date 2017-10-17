@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
+
  	  <ul id="profileopt"  class="dropdown-content">
  <li><a href="posts.php">Inicio</a></li>  
  <li><a href="profile.php">Perfil</a></li>
@@ -36,6 +37,7 @@
 <?php 
 require 'db2.php';
 session_start();
+
  $contenido = $mysqli1->query("SELECT titulo FROM comentarios");
  $contenido1 = $mysqli1->query("SELECT id FROM comentarios");
 $contenido2 = $mysqli1->query("SELECT id, titulo, content, account FROM comentarios");

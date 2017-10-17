@@ -1,8 +1,8 @@
 <?php
-/* Displays user information and some useful messages */
+
 session_start();
 
-// Check if user is logged in using the session variable
+
 if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "Debes Iniciar Sesion antes de acceder!";
   header("location: error.php");    
@@ -55,8 +55,9 @@ if ( $_SESSION['logged_in'] != 1 ) {
           <textarea id="textarea1" name="descripcion" class="materialize-textarea"></textarea>
           <label for="textarea1">Contenido</label>
         </div>
-      
-<input type="submit" class="btn btn-primary" value="Crear Post" name="crear" />
+
+<input type="submit" class="btn"  name="crear" />
+ 
    
       </div>
  
@@ -66,6 +67,7 @@ if ( $_SESSION['logged_in'] != 1 ) {
 </div>
 </div>
 </center>
+
 <style type="text/css">
   #textarea1 { 
     width: 500px;
@@ -75,11 +77,13 @@ if ( $_SESSION['logged_in'] != 1 ) {
 }
 footer {
   background-color: black;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 70px;
+  z-index: 10;
   color: white;
+  margin-top: -3em;
 }
 </style>
 

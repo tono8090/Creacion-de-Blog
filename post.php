@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	  <ul id="profileopt"  class="dropdown-content">
+ <li><a href="posts.php">Inicio</a></li>  
+ <li><a href="profile.php">Perfil</a></li>
+ <li><a href="foroadd.php">Nuevo Post</a></li>                
+ <li class="divider"></li>
+ <li><a href="logout.php">Cerrar Sesión</a></li>           
+</ul>
+<ul class="right">
+<li><a class="dropdown-button grey-text text-darken-1"  href="#!" data-constrainwidth="false" data-beloworigin="true" data-activates="profileopt"><img style="height:60px;" class="circle" src="perfil.jpg"></a></li>
+</ul>
+
+   <nav  class="z-depth-0" style="background-color: black" ><div  class="container-wide"><div class="row"><div class="col s12 m3" >
+ <img src="logo1.png" class="col s12 m3"  width="auto" height="auto">
+<center> <div class="row"><h4 class="col m6" >Post</h4></div></center>
+ 
+
+  </nav>
+ 	
+
+
+		   
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+
+
 <?php 
 session_start();
 require 'db2.php';
@@ -8,17 +38,63 @@ $ro = array();
 $ro1= array();
 $rows1=$contenido2-> num_rows;
  $ro1= mysqli_fetch_row( $contenido2 ) ;
-echo $ro1[1]."<p>".$ro1[2]."</p>";
+echo "<center>
+<div class='row'>
+        <div class='col s24 m12'>
+          <div  style='width: auto;' class='card blue-grey darken-1'>
+            <div class='card-content white-text'>
+              <span class='card-title'>".$ro1[1]."</span><p>
+        </div>
+            <div class='card-action'>
+            <p>".$ro1[2]."
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+   
+      
+     
+        </center>";
 ?>
-<!DOCTYPE html>
-<html>
-            <form method="post" action='post2.php'>
+<body>
+	<style type="text/css">
+		footer {
+  background-color: black;
+  bottom: 10;
+  width: 100%;
+ 
+  color: white;
+     clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+	</style>
+    
+
+
+<center>
+    <form method="post"  action='post2.php'>
              
-            <button type="submmit">Ir a la Discusion</button> 
+            <button class="btn" class="right" type="submmit">Ir a la Discusion</button> 
     </form>
-          <a href="logout.php"><button class="button button-block" name="logout"/>Cerrar Sesion</button></a>
+         
+</center>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="js/materialize.min.js"></script>    
+      <script type="text/javascript"></script>
 
-          <a href="posts.php"><button class="button button-block" name="Inicio"/>Inicio</button></a>
-        <a href="profile.php"><button class="button button-block" name="Inicio"/>perfil</button></a>
 
+</body>
+<footer style="background-color: black" class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017-2017 Emilio, All rights reserved.
+        <a class="grey-text text-lighten-4 right" href="https://github.com/tono8090/Creacion-de-Blog/blob/gh-pages/README.md">Repositorio Github</a>
+        </div>
+      </div>
+    </footer
 </html>
