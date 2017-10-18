@@ -3,7 +3,7 @@
 <head>
   <ul id="profileopt"  class="dropdown-content">
  <li><a href="posts.php">Inicio</a></li>  
- <li><a href="profile.php">Perfil</a></li>
+
  <li><a href="foroadd.php">Nuevo Post</a></li>                
  <li class="divider"></li>
  <li><a href="logout.php">Cerrar Sesión</a></li>           
