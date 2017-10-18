@@ -1,17 +1,23 @@
+
+
 <!DOCTYPE html>
 <html>
  <head>
 
  	  <ul id="profileopt"  class="dropdown-content">
- <li><a href="posts.php">Inicio</a></li>  
+ <li ><a href="posts.php">Inicio</a></li>  
  <li><a href="profile.php">Perfil</a></li>
  <li><a href="foroadd.php">Nuevo Post</a></li>                
  <li class="divider"></li>
  <li><a href="logout.php">Cerrar Sesión</a></li>           
 </ul>
-<ul class="right">
-<li><a class="dropdown-button grey-text text-darken-1"  href="#!" data-constrainwidth="false" data-beloworigin="true" data-activates="profileopt"><img style="height:60px;" class="circle" src="perfil.jpg"></a></li>
+<ul  class="right">
+   <a href="index.php"><button id="bot" class='btn btn-primary'/>Registrarse</button></a>
+</div>
+<li ><a id="pro" class="dropdown-button grey-text text-darken-1"  href="#!" data-constrainwidth="false" data-beloworigin="true" data-activates="profileopt"><img style="height:60px;" class="circle" src="perfil.jpg"></a></li>
 </ul>
+
+
 
    <nav  class="z-depth-0" style="background-color: black" ><div  class="container-wide"><div class="row"><div class="col s12 m3" >
  <img src="logo1.png" class="col s12 m3"  width="auto" height="auto">
@@ -37,34 +43,36 @@
 <?php 
 require 'db2.php';
 session_start();
+$log='';
+if ( isset($_SESSION['logged_in']) ) {
+  $log=1;
 
- $contenido = $mysqli1->query("SELECT titulo FROM comentarios");
- $contenido1 = $mysqli1->query("SELECT id FROM comentarios");
+}
+else{
+
+  $log=0;
+}
+
 $contenido2 = $mysqli1->query("SELECT id, titulo, content, account FROM comentarios");
-$row = array();
-$row2 = array();
-$row3 = array();
-$v='';
-$rows1=$contenido-> num_rows;
+
+$rows=$contenido2-> num_rows;
+
 $rows1=$contenido2-> num_rows;
-$strings = array();
-$account=array();
-$comprar='';
-while( $row[] = mysqli_fetch_assoc( $contenido ) );
 while( $row1[] = mysqli_fetch_assoc( $contenido2 ) );
-$_SESSION['av']=array(); 
+
 for ($i = 0; $i < $rows1; $i++) {
 
 
 
     echo "<div class='row'>
-        <div class='col s12 m6'>
-          <div class='card grey darken-3'>
+        <div class='col s12 m6' >
+          <div class='card grey darken-3' class='left'>
             <div class='card-content white-text'>
-              <span class='card-title'>".$row[$i]['titulo']."</span>".'by: '.$row1[$i]['account']."  <p>copiar el siguiente codigo para poder acceder al foro:<p>"." "."(".$row1[$i]['id'].")       </div>
+              <form  method='post' action='post.php'>
+              <span  class='card-title'>".$row1[$i]['titulo']."</span>".'by: '.$row1[$i]['account']."  <p><input type='text' style='display: none;' name='id' id='cosa".$i."' value=".$row1[$i]['id']."></p>       </div>
             <div class='card-action'>
-              <a href='captcha.php'>Ir al Post</a>
-            
+              <button class='btn btn-primary' type='submit'>Ir al Post</button>
+            </form>
             </div>
           </div>
         </div>
@@ -72,6 +80,8 @@ for ($i = 0; $i < $rows1; $i++) {
     }
 
 ?>
+</button>
+
 <style type="text/css">
 	footer {
   background-color: black;
@@ -82,7 +92,7 @@ for ($i = 0; $i < $rows1; $i++) {
   color: white;
 }
 </style>
-<footer style="background-color: black" class="page-footer">
+<footer    style="background-color: black" class="page-footer">
       <div class="footer-copyright">
         <div class="container">
         © 2017-2017 Emilio, All rights reserved.
@@ -90,5 +100,16 @@ for ($i = 0; $i < $rows1; $i++) {
         </div>
       </div>
     </footer>
+<script type="text/javascript">
+ 
+  var logged=<?php echo  json_encode($log); ?> ;
+    console.log(logged);
 
+  if (logged <= 0 ) {
+  document.getElementById('pro').style.display= 'none';
+}
+else{
+  document.getElementById('bot').style.display= 'none';
+}
+</script>
 </html>

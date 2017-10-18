@@ -31,7 +31,7 @@
 <?php 
 session_start();
 require 'db2.php';
-$_SESSION['idcom'] = $_POST['it'];
+$_SESSION['idcom'] = $_POST['id'];
 $id=$_SESSION['idcom'];
 $contenido2 = $mysqli1->query("SELECT  id, titulo, content FROM comentarios WHERE id = $id ");
 $ro = array();
@@ -66,10 +66,8 @@ echo "<center>
  
   color: white;
      clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
+    position: absolute;
+
 }
 
 	</style>
@@ -89,12 +87,5 @@ echo "<center>
 
 
 </body>
-<footer style="background-color: black" class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
-        © 2017-2017 Emilio, All rights reserved.
-        <a class="grey-text text-lighten-4 right" href="https://github.com/tono8090/Creacion-de-Blog/blob/gh-pages/README.md">Repositorio Github</a>
-        </div>
-      </div>
-    </footer
+
 </html>
