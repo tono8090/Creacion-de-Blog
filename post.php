@@ -30,10 +30,10 @@
 
 <?php 
 session_start();
-require 'db2.php';
+require 'db.php';
 $_SESSION['idcom'] = $_POST['id'];
 $id=$_SESSION['idcom'];
-$contenido2 = $mysqli1->query("SELECT  id, titulo, content FROM comentarios WHERE id = $id ");
+$contenido2 = $mysqli->query("SELECT  id, titulo, content FROM comentarios WHERE id = $id ");
 $ro = array();
 $ro1= array();
 $rows1=$contenido2-> num_rows;

@@ -41,7 +41,7 @@
 
 
 <?php 
-require 'db2.php';
+require 'db.php';
 session_start();
 $log='';
 if ( isset($_SESSION['logged_in']) ) {
@@ -53,7 +53,7 @@ else{
   $log=0;
 }
 
-$contenido2 = $mysqli1->query("SELECT id, titulo, content, account FROM comentarios");
+$contenido2 = $mysqli->query("SELECT id, titulo, content, account FROM comentarios");
 
 $rows=$contenido2-> num_rows;
 

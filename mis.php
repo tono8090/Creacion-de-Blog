@@ -1,5 +1,5 @@
 <?php
-require 'db2.php';
+require 'db.php';
  
 session_start();
 
@@ -10,8 +10,8 @@ if ( $_SESSION['logged_in'] != 1 ) {
   header("location: error.php");    
 }   
 $email2= $_SESSION['email'];  
-$descripcion= $mysqli1->escape_string($_POST['descripcion']);
-$titulo = $mysqli1->escape_string($_POST['titulo']);
+$descripcion= $mysqli->escape_string($_POST['descripcion']);
+$titulo = $mysqli->escape_string($_POST['titulo']);
 
 
 
@@ -21,7 +21,7 @@ $titulo = $mysqli1->escape_string($_POST['titulo']);
             . "VALUES ('$titulo','$descripcion','$email2')";
 
     // Add user to the database
-    if ( $mysqli1->query($sql1) ){
+    if ( $mysqli->query($sql1) ){
 
         header("location: posts.php"); 
 
