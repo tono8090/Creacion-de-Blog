@@ -1,1 +1,1 @@
-# Creacion-de-Blog
+Instrucciones en la Wiki :)
