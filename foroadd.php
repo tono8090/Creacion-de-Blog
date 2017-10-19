@@ -72,6 +72,9 @@ if ( $_SESSION['logged_in'] != 1 ) {
 </div>
 </div>
 </center>
+<br>
+  <br>
+    
 
 <style type="text/css">
   #textarea1 { 
@@ -114,5 +117,4 @@ footer {
     </footer
 
 </html>
-
 
