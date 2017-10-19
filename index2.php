@@ -110,10 +110,17 @@ background-attachment : fixed;
 
 } 
 </style>
+<br>  
+  <br>
+    <br>
+      <br>
 
 <body  background="fondo2.jpg">
 
-
+<br>
+<br>
+<br>
+<br>
     <center>
       <div class="container">
         <div id="cosa1" class="z-depth-1 grey lighten-4 row"  style="display: inline-block; padding: 32px 48px 0px 48px; border: 20px solid #EEE;  ">
@@ -196,6 +203,10 @@ background-attachment : fixed;
 </div>
 </div>
 </center>
+<br>
+  <br>
+    <br>
+      <br>
 
 
 

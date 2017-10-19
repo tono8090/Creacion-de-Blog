@@ -110,6 +110,10 @@ background-attachment : fixed;
 
 } 
 </style>
+<br>
+<br>
+<br>
+<br>
 
 <body  background="fondo2.jpg">
 
@@ -192,13 +196,17 @@ background-attachment : fixed;
             
           <button type="submit" class="btn btn-primary" name="register" />Registrarse</button>
           <a href="index.php">¿ya tienes cuenta?</a>
+          <br><br>
           </form></div></div>
 </div>
 </div>
 </center>
 
 
-
+<br>  
+  <br>
+    <br>
+      <br>
 
 
 
