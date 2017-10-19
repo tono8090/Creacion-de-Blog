@@ -9,7 +9,7 @@ require 'db.php';
 
 $_SESSION['token']=1;
 $email=$_SESSION['email'];
-$id=$_SESSION['idcom'];
+$id=$_SESSION['idcom'];		
 $com=$_POST['comment'];
 $res=$mysqli->query("INSERT INTO comms (identidad,comentario, cuenta) " 
             . "VALUES ('$id','$com','$email')");
