@@ -20,7 +20,7 @@ session_start();
     endif;
     ?>
     </p>     
-    <a href="index.php"><button class="button button-block"/>Registrarse</button></a>
+    <a href="index2.php"><button class="button button-block"/>Registrarse</button></a>
 </div>
 </body>
 </html>
